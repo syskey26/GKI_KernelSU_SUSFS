@@ -536,8 +536,8 @@ jobs:
       - name: Change Kernel Name
         run: |
           cd "$CONFIG"
-          #Add Wild to Kernel Version
-          sed -i '$s|echo "\$res"|echo "\$res-Wild"|' ./common/scripts/setlocalversion
+          #Add Custom Kernel Version
+          sed -i '$s|echo "\$res"|echo "\$res-g14220ae4ce65-ab13680582-4k"|' ./common/scripts/setlocalversion
 
           #Set Kernel Timestamp
           CURRENT_TIME="Mon Jun 23 07:30:57 UTC 2025"
